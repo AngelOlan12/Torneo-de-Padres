@@ -1,0 +1,77 @@
+{
+  "nombre_equipo": "Padres 1ro B",
+  "integrantes": [
+    {
+      "nombre": "Joel Espinosa Hernandez",
+      "hijos": [
+        {
+          "nombre": "Joel Emiliano Espinosa Del Angel",
+          "grado_grupo": "1B"
+        }
+      ]
+    },
+    {
+      "nombre": "Hugo Enrique Graff Izquierdo",
+      "hijos": [
+        {
+          "nombre": "Abril Graff Almeida",
+          "grado_grupo": "1B"
+        }
+      ]
+    },
+    {
+      "nombre": "Rodolfo Alejandro Rebollo Rosas",
+      "hijos": [
+        {
+          "nombre": "Sofia Rebollo Chavarin",
+          "grado_grupo": "1B"
+        }
+      ]
+    },
+    {
+      "nombre": "Jorge Ramos Armendariz",
+      "hijos": [
+        {
+          "nombre": "Leonardo Gael Ramos Canepa",
+          "grado_grupo": "1B "
+        }
+      ]
+    },
+    {
+      "nombre": "Alfredo Carrera",
+      "hijos": [
+        {
+          "nombre": "Santiago Carrera",
+          "grado_grupo": "1B"
+        }
+      ]
+    },
+    {
+      "nombre": "Armando Villegas Beltrán",
+      "hijos": [
+        {
+          "nombre": "Armando Emilio Villegas Peregrino",
+          "grado_grupo": "1B"
+        }
+      ]
+    },
+    {
+      "nombre": "Raúl Antonio Torres Baeza",
+      "hijos": [
+        {
+          "nombre": "Amelie Marian Torres Gama",
+          "grado_grupo": "1B"
+        }
+      ]
+    },
+    {
+      "nombre": "Fred Izquierdo Sanchez",
+      "hijos": [
+        {
+          "nombre": "Sebastián Izquierdo Meneses",
+          "grado_grupo": "1B"
+        }
+      ]
+    }
+  ]
+}

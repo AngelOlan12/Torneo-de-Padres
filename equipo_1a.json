@@ -1,0 +1,68 @@
+{
+  "nombre_equipo": "Padres 1",
+  "integrantes": [
+    {
+      "nombre": "ARTURO JOSE BRABATA RAMON",
+      "hijos": [
+        {
+          "nombre": "Francisco Javier Ortega De la cruz",
+          "grado_grupo": "1A"
+        }
+      ]
+    },
+    {
+      "nombre": "Humberto Morales Perez",
+      "hijos": [
+        {
+          "nombre": "Carlos Humberto",
+          "grado_grupo": "1A"
+        }
+      ]
+    },
+    {
+      "nombre": "José Manuel sanchez reyes",
+      "hijos": [
+        {
+          "nombre": "Matías Sánchez Jiménez",
+          "grado_grupo": "1A"
+        }
+      ]
+    },
+    {
+      "nombre": "Juan de la Cruz Pérez Paez",
+      "hijos": [
+        {
+          "nombre": "Emmanuel Pérez Domínguez",
+          "grado_grupo": "1B"
+        }
+      ]
+    },
+    {
+      "nombre": "Cesar Eduardo Perez Peña",
+      "hijos": [
+        {
+          "nombre": "Bernardo Perez Peña",
+          "grado_grupo": "1B"
+        }
+      ]
+    },
+    {
+      "nombre": "Adrián mayo jauregui",
+      "hijos": [
+        {
+          "nombre": "Antonella mayo Ake",
+          "grado_grupo": "1B"
+        }
+      ]
+    },
+    {
+      "nombre": "Amrafel Meza Sánchez",
+      "hijos": [
+        {
+          "nombre": "José Maria Meza y Juan Pablo Meza",
+          "grado_grupo": "1 B"
+        }
+      ]
+    }
+  ]
+}
