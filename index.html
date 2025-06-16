@@ -410,32 +410,3 @@
     </script>
 </body>
 </html>
-            });
-            
-            // Evento para filtrar partidos por fecha
-            document.querySelectorAll('.date-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // Marcar como activo
-                    document.querySelectorAll('.date-btn').forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    
-                    // Filtrar partidos por fecha
-                    const date = btn.getAttribute('data-date');
-                    const matches = document.querySelectorAll('.match-card');
-                    
-                    matches.forEach(match => {
-                        if (match.getAttribute('data-date') === date) {
-                            match.style.display = 'block';
-                        } else {
-                            match.style.display = 'none';
-                        }
-                    });
-                });
-            });
-        }
-        
-        // Cargar los datos cuando se cargue la página
-        document.addEventListener('DOMContentLoaded', cargarDatos);
-    </script>
-</body>
-</html>
