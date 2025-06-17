@@ -1,0 +1,77 @@
+{
+  "nombre_equipo": "Equipo 3",
+  "integrantes": [
+    {
+      "nombre": "Neftali Moreno",
+      "hijos": [
+        {
+          "nombre": "Mason Moreno",
+          "grado_grupo": "6 B"
+        }
+      ]
+    },
+    {
+      "nombre": "Iovani Morales Escobar",
+      "hijos": [
+        {
+          "nombre": "Jade Morales Mollinedo",
+          "grado_grupo": "6A"
+        }
+      ]
+    },
+    {
+      "nombre": "Jorge Córdova",
+      "hijos": [
+        {
+          "nombre": "Paulina Miranda Córdova Duran",
+          "grado_grupo": "6A"
+        }
+      ]
+    },
+    {
+      "nombre": "Raúl Romero Vazquez",
+      "hijos": [
+        {
+          "nombre": "Jonathan Raúl Romero Capitán",
+          "grado_grupo": "3 A"
+        }
+      ]
+    },
+    {
+      "nombre": "Uriel Torres Rocete",
+      "hijos": [
+        {
+          "nombre": "Aianara Torres Sanchez",
+          "grado_grupo": "3b"
+        }
+      ]
+    },
+    {
+      "nombre": "Alvaro Vallejo Paz",
+      "hijos": [
+        {
+          "nombre": "Alvaro David Vallejo Aguilera",
+          "grado_grupo": "1A"
+        }
+      ]
+    },
+    {
+      "nombre": "Javier Arturo Arguello Martinez",
+      "hijos": [
+        {
+          "nombre": "Christian Javier Arguello Madrigal",
+          "grado_grupo": "2B"
+        }
+      ]
+    },
+    {
+      "nombre": "Antonio Jiménez Gutiérrez",
+      "hijos": [
+        {
+          "nombre": "Leonardo Jimenez Villatoro",
+          "grado_grupo": "4A"
+        }
+      ]
+    }
+  ]
+}
