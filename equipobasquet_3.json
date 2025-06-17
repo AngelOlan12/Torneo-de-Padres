@@ -1,33 +1,68 @@
 {
-  "nombre_equipo": "Equipo Representativo Básquetbol",
+  "nombre_equipo": "Básquetbol 2",
   "integrantes": [
     {
-      "nombre": "José Alejandro Casanova Payró",
-      "hijos": []
+      "nombre": "Raúl Antonio Torres Baeza",
+      "hijos": [
+        {
+          "nombre": "Amelie Marian Torres Gama",
+          "grado_grupo": "1°. B"
+        }
+      ]
     },
     {
-      "nombre": "Julio Alejandro Díaz",
-      "hijos": []
+      "nombre": "Hugo Enrique Graff Izquierdo",
+      "hijos": [
+        {
+          "nombre": "Abril Graff Almeida",
+          "grado_grupo": "1°. B"
+        }
+      ]
     },
     {
-      "nombre": "Luis Gabriel Montiel Ramírez",
-      "hijos": []
+      "nombre": "Jorge Ramos Armendáriz",
+      "hijos": [
+        {
+          "nombre": "Leonardo Gael Ramos Canepa",
+          "grado_grupo": "1°. B"
+        }
+      ]
     },
     {
-      "nombre": "Jose Maria Casanova Payró",
-      "hijos": []
+      "nombre": "Rodolfo Alejandro Rebollo Rosas",
+      "hijos": [
+        {
+          "nombre": "Sofía Rebollo Chavajù",
+          "grado_grupo": "1° B"
+        }
+      ]
     },
     {
-      "nombre": "Leonardo Antonio Jiménez Villatoro",
-      "hijos": []
+      "nombre": "Armando Villegas Beltrán",
+      "hijos": [
+        {
+          "nombre": "Armando Emilio Villegas Peregrino",
+          "grado_grupo": "1° B"
+        }
+      ]
     },
     {
-      "nombre": "Santiago Lezama González",
-      "hijos": []
+      "nombre": "Jorge Abel Falcón Moreno",
+      "hijos": [
+        {
+          "nombre": "Jorge Abel Falcón Vivas",
+          "grado_grupo": "1° A"
+        }
+      ]
     },
     {
-      "nombre": "Erick Julián Tamayo Pérez",
-      "hijos": []
+      "nombre": "Juan Luis Montiel Hernández",
+      "hijos": [
+        {
+          "nombre": "Luis Gabriel Montiel Ramírez",
+          "grado_grupo": "2° A"
+        }
+      ]
     }
   ]
 }
