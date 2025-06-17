@@ -72,6 +72,15 @@
           "grado_grupo": "4A"
         }
       ]
+    },
+            {
+      "nombre": "Ernesto Gutiérrez Torres",
+      "hijos": [
+        {
+          "nombre": "Matias Isai Gutierrez Rodriguez",
+          "grado_grupo": "5A"
+        }
+      ]
     }
   ]
 }
