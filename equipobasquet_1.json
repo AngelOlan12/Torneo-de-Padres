@@ -1,0 +1,72 @@
+{
+  "nombre_equipo": "Básquetbol 1",
+  "integrantes": [
+    {
+      "nombre": "Benjamín Gerardo Vasconcelos Espinosa",
+      "hijos": [
+        {
+          "nombre": "Gerardo Vasconcelos Gómez",
+          "grado_grupo": "5°. B"
+        }
+      ]
+    },
+    {
+      "nombre": "Luis Alberto de la cruz Ocaña",
+      "hijos": [
+        {
+          "nombre": "Miranda de la cruz Algarín",
+          "grado_grupo": "5° A"
+        },
+        {
+          "nombre": "Emilia de la cruz Algarín",
+          "grado_grupo": "2° B"
+        }
+      ]
+    },
+    {
+      "nombre": "Alberto Priego Sobrino",
+      "hijos": [
+        {
+          "nombre": "Alberto Priego González",
+          "grado_grupo": "5°. A"
+        }
+      ]
+    },
+    {
+      "nombre": "Oscar Rongellón Arcos",
+      "hijos": [
+        {
+          "nombre": "Iker Rongellón Melo",
+          "grado_grupo": "5° A"
+        }
+      ]
+    },
+    {
+      "nombre": "Ricardo Valladares Rivera",
+      "hijos": [
+        {
+          "nombre": "Ximena Valladares Rosales",
+          "grado_grupo": "5° A"
+        }
+      ]
+    },
+    {
+      "nombre": "Félix Palomares García",
+      "hijos": [
+        {
+          "nombre": "Vania Nicole Palomares Magaña",
+          "grado_grupo": "3° A"
+        }
+      ]
+    },
+    {
+      "nombre": "David Fabián Moreno",
+      "hijos": [
+        {
+          "nombre": "Ian Enrique Fabián Martínez",
+          "grado_grupo": "2 A"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "nombre_equipo": "Equipo Representativo Básquetbol",
+  "integrantes": [
+    {
+      "nombre": "José Alejandro Casanova Payró",
+      "hijos": []
+    },
+    {
+      "nombre": "Julio Alejandro Díaz",
+      "hijos": []
+    },
+    {
+      "nombre": "Luis Gabriel Montiel Ramírez",
+      "hijos": []
+    },
+    {
+      "nombre": "Jose Maria Casanova Payró",
+      "hijos": []
+    },
+    {
+      "nombre": "Leonardo Antonio Jiménez Villatoro",
+      "hijos": []
+    },
+    {
+      "nombre": "Santiago Lezama González",
+      "hijos": []
+    },
+    {
+      "nombre": "Erick Julián Tamayo Pérez",
+      "hijos": []
+    }
+  ]
+}

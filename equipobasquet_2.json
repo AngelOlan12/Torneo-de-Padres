@@ -1,0 +1,68 @@
+{
+  "nombre_equipo": "Básquetbol 2",
+  "integrantes": [
+    {
+      "nombre": "Raúl Antonio Torres Baeza",
+      "hijos": [
+        {
+          "nombre": "Amelie Marian Torres Gama",
+          "grado_grupo": "1°. B"
+        }
+      ]
+    },
+    {
+      "nombre": "Hugo Enrique Graff Izquierdo",
+      "hijos": [
+        {
+          "nombre": "Abril Graff Almeida",
+          "grado_grupo": "1°. B"
+        }
+      ]
+    },
+    {
+      "nombre": "Jorge Ramos Armendáriz",
+      "hijos": [
+        {
+          "nombre": "Leonardo Gael Ramos Canepa",
+          "grado_grupo": "1°. B"
+        }
+      ]
+    },
+    {
+      "nombre": "Rodolfo Alejandro Rebollo Rosas",
+      "hijos": [
+        {
+          "nombre": "Sofía Rebollo Chavajù",
+          "grado_grupo": "1° B"
+        }
+      ]
+    },
+    {
+      "nombre": "Armando Villegas Beltrán",
+      "hijos": [
+        {
+          "nombre": "Armando Emilio Villegas Peregrino",
+          "grado_grupo": "1° B"
+        }
+      ]
+    },
+    {
+      "nombre": "Jorge Abel Falcón Moreno",
+      "hijos": [
+        {
+          "nombre": "Jorge Abel Falcón Vivas",
+          "grado_grupo": "1° A"
+        }
+      ]
+    },
+    {
+      "nombre": "Juan Luis Montiel Hernández",
+      "hijos": [
+        {
+          "nombre": "Luis Gabriel Montiel Ramírez",
+          "grado_grupo": "2° A"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "nombre_equipo": "Equipo 8",
+  "integrantes": [
+    {
+      "nombre": "Daniel Mira",
+      "hijos": [
+        {
+          "nombre": "Mathias Emilio Mira Sánchez",
+          "grado_grupo": "4B"
+        }
+      ]
+    },
+    {
+      "nombre": "Juan Manuel Nájera",
+      "hijos": [
+        {
+          "nombre": "Rebeca Najera Gaytan",
+          "grado_grupo": "4B"
+        }
+      ]
+    },
+    {
+      "nombre": "Juan Carlos Concha Vélez",
+      "hijos": [
+        {
+          "nombre": "Pablo Emilio Muñoz Herrera",
+          "grado_grupo": "4B"
+        }
+      ]
+    },
+    {
+      "nombre": "Octavio Guillen Cruz",
+      "hijos": [
+        {
+          "nombre": "Belisario Guillen Feria",
+          "grado_grupo": "4B"
+        }
+      ]
+    },
+    {
+      "nombre": "Sin especificar",
+      "hijos": [
+        {
+          "nombre": "Naomi",
+          "grado_grupo": "4B"
+        }
+      ]
+    },
+    {
+      "nombre": "Sin especificar",
+      "hijos": [
+        {
+          "nombre": "Lucio",
+          "grado_grupo": "4B"
+        }
+      ]
+    },
+    {
+      "nombre": "Sin especificar",
+      "hijos": [
+        {
+          "nombre": "Dayane",
+          "grado_grupo": "4B"
+        }
+      ]
+    },
+    {
+      "nombre": "Sin especificar",
+      "hijos": [
+        {
+          "nombre": "Victor",
+          "grado_grupo": "4B"
+        }
+      ]
+    },
+    {
+      "nombre": "Sin especificar",
+      "hijos": [
+        {
+          "nombre": "Patricio",
+          "grado_grupo": "4B"
+        }
+      ]
+    },
+    {
+      "nombre": "Sin especificar",
+      "hijos": [
+        {
+          "nombre": "Aldo",
+          "grado_grupo": "4B"
+        }
+      ]
+    }
+  ]
+}
