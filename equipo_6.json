@@ -63,6 +63,13 @@
           "grado_grupo": "5A"
         }
       ]
-    }
+    },
+    {
+      "nombre": "Carlos Alberto Durante Vazquez",
+      "hijos": [
+        {
+          "nombre": "Héctor Eduardo Durante Gonzalez",
+          "grado_grupo": "3A"
+        }
   ]
 }
