@@ -1,66 +1,83 @@
 {
-  "nombre_equipo": "Equipo 7",
+  "nombre_equipo": "Equipo 6",
   "integrantes": [
     {
-      "nombre": "Eduardo Guillermo Patiño Palma",
+      "nombre": "Omar Humberto Rico Vázquez",
       "hijos": [
         {
-          "nombre": "Valeria Hinojosa Patiño",
-          "grado_grupo": "5A"
-        }
-      ]
-    },
-    {
-      "nombre": "Ernesto Gutiérrez Torres",
-      "hijos": [
-        {
-          "nombre": "Iker Eduardo Gutiérrez Rodriguez",
-          "grado_grupo": "5A"
-        }
-      ]
-    },
-    {
-      "nombre": "Mario López Requena",
-      "hijos": [
-        {
-          "nombre": "Mario Requena López Aparicio",
-          "grado_grupo": "5A"
-        }
-      ]
-    },
-    {
-      "nombre": "Félix Palomares García",
-      "hijos": [
-        {
-          "nombre": "Félix Samuel Palomares Magaña",
-          "grado_grupo": "5A"
-        }
-      ]
-    },
-    {
-      "nombre": "Carlos Emilio Pérez Vidal",
-      "hijos": [
-        {
-          "nombre": "Yael Carrera Guzmán",
+          "nombre": "Renata Isabella Rico Ramos",
           "grado_grupo": "5B"
         }
       ]
     },
     {
-      "nombre": "Alejandro Velázquez Velázquez",
+      "nombre": "Luis Yair Mariscurrena Valenzuela",
       "hijos": [
         {
-          "nombre": "Jonathan Alejandro Velázquez Cruz",
+          "nombre": "Yair Mariscurrena",
           "grado_grupo": "5B"
         }
       ]
     },
     {
-      "nombre": "Jefferson la Rosa",
+      "nombre": "Fred Gómez Leyva",
       "hijos": [
         {
-          "nombre": "Adrián la Rosa",
-          "grado_grupo": "5A"
+          "nombre": "Alejandro Guillén",
+          "grado_grupo": "5B"
+        },
+        {
+          "nombre": "Rodrigo Guillén",
+          "grado_grupo": "4A"
+        }
+      ]
+    },
+    {
+      "nombre": "Jorge Armendáriz Gutiérrez",
+      "hijos": [
+        {
+          "nombre": "Carolina Armendáriz",
+          "grado_grupo": "4A"
+        },
+        {
+          "nombre": "Mariana Armendáriz",
+          "grado_grupo": "5B"
+        }
+      ]
+    },
+    {
+      "nombre": "Carlos Mario Gallego Mezquita",
+      "hijos": [
+        {
+          "nombre": "Santiago Gallego",
+          "grado_grupo": "5B"
+        }
+      ]
+    },
+    {
+      "nombre": "EDUARDO GONZÁLEZ ESTRADA",
+      "hijos": [
+        {
+          "nombre": "OBED GONZÁLEZ LÓPEZ",
+          "grado_grupo": "4A"
+        }
+      ]
+    },
+    {
+      "nombre": "Neil Erique Jimenez Gonzalez",
+      "hijos": [
+        {
+          "nombre": "Matias Pascual",
+          "grado_grupo": "5B"
+        }
+      ]
+    },
+     {
+      "nombre": "Michelle Fosil Barrera",
+      "hijos": [
+        {
+          "nombre": "Leornado y Fernando",
+          "grado_grupo": "5B"
         }
       ]
     }
