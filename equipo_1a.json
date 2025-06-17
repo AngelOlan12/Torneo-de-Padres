@@ -63,6 +63,24 @@
           "grado_grupo": "1 B"
         }
       ]
+    },
+        {
+      "nombre": "Rafael Pérez Bautista",
+      "hijos": [
+        {
+          "nombre": "Sofia Alejandra Pérez Castañeda",
+          "grado_grupo": "1 B"
+        }
+      ]
+    },
+     {
+      "nombre": "Jorge Mexicano Navarro",
+      "hijos": [
+        {
+          "nombre": "Raúl Eduardo Mexicano Carrasco",
+          "grado_grupo": "3B"
+        }
+      ]
     }
   ]
 }
