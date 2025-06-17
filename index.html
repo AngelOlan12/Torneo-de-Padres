@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Torneo Deportivo Día del Padre</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="torneo.css">
 </head>
+
 <body>
     <div class="app-container">
         <header class="app-header">
@@ -50,7 +54,7 @@
             <div class="app-banner">
                 <div class="banner-content">
                     <h1>Equipos Participantes</h1>
-                    <p>Torneo Deportivo Día del Padre 2024</p>
+                    <p>Torneo Deportivo Día del Padre 2025</p>
                 </div>
                 <div class="banner-image">
                     <img src="https://cdn-icons-png.flaticon.com/512/2158/2158416.png" alt="Equipos">
@@ -83,7 +87,7 @@
                     <button class="date-btn" data-date="2024-06-22">22 Jun</button>
                     <button class="date-btn" data-date="2024-06-23">23 Jun</button>
                 </div>
-                
+
                 <div class="matches-container" id="matches-container">
                     <!-- Los partidos se cargarán dinámicamente aquí -->
                 </div>
@@ -91,7 +95,7 @@
         </section>
 
         <footer class="app-footer">
-            <p>&copy; 2024 Torneo Día del Padre | Escuela Primaria</p>
+            <p>&copy; 2025 Torneo Día del Padre | IET CARLOS PELLICER CÁMARA</p>
         </footer>
     </div>
 
@@ -114,200 +118,482 @@
         async function loadTeams() {
             const equipo_1a = await loadJSON('equipo_1a.json');
             const equipo_1b = await loadJSON('equipo_1b.json');
+            const equipo_3 = await loadJSON('equipo_3.json');
+            const equipo_4 = await loadJSON('equipo_4.json');
+            const equipo_5 = await loadJSON('equipo_5.json');
+            const equipo_6 = await loadJSON('equipo_6.json');
+            const equipo_7 = await loadJSON('equipo_7.json');
+            const equipo_8 = await loadJSON('equipo_8.json');
+            const equipovolei_1 = await loadJSON('equipovolei_1.json');
+            const equipovolei_2 = await loadJSON('equipovolei_2.json');
+            const equipobasquet_1 = await loadJSON('equipobasquet_1.json');
+            const equipobasquet_2 = await loadJSON('equipobasquet_2.json');
+            const equipobasquet_3 = await loadJSON('equipobasquet_3.json');
             
-            if (!equipo_1a || !equipo_1b) {
+            if (!equipo_1a || !equipo_1b || !equipo_3 || !equipo_4 || !equipo_5 || !equipo_6 || 
+                !equipo_7 || !equipo_8 || !equipovolei_1 || !equipovolei_2 || !equipobasquet_1 || 
+                !equipobasquet_2 || !equipobasquet_3) {
                 document.getElementById('teams-container').innerHTML = '<p>Error al cargar los equipos</p>';
                 return;
             }
             
             const teamsContainer = document.getElementById('teams-container');
             
-            // Equipo 1A
-            let team1AHTML = `
-                <div class="team-card" data-sport="futbol" data-grado="1A">
-                    <div class="team-header">
-                        <h3>${escapeHTML(equipo_1a.nombre_equipo)}</h3>
-                        <span class="team-sport">⚽ Fútbol</span>
-                    </div>
-                    <div class="team-members">
-                        <div class="team-avatars">
-            `;
+            // Definir datos de equipos con nombres amigables
+            const equiposData = [
+                {equipo: equipo_1a, nombre: "Equipo 1", sport: "futbol", grado: "1A", offset: 30},
+                {equipo: equipo_1b, nombre: "Equipo 2", sport: "futbol", grado: "1B", offset: 1},
+                {equipo: equipo_3, nombre: "Equipo 3", sport: "futbol", grado: "3", offset: 15},
+                {equipo: equipo_4, nombre: "Equipo 4", sport: "futbol", grado: "4", offset: 45},
+                {equipo: equipo_5, nombre: "Equipo 5", sport: "futbol", grado: "5", offset: 60},
+                {equipo: equipo_6, nombre: "Equipo 6", sport: "futbol", grado: "6", offset: 75},
+                {equipo: equipo_7, nombre: "Equipo 7", sport: "futbol", grado: "7", offset: 90},
+                {equipo: equipo_8, nombre: "Equipo 8", sport: "futbol", grado: "8", offset: 10},
+                {equipo: equipovolei_1, nombre: "Voleibol 1", sport: "voleibol", grado: "V1", offset: 25},
+                {equipo: equipovolei_2, nombre: "Voleibol 2", sport: "voleibol", grado: "V2", offset: 35},
+                {equipo: equipobasquet_1, nombre: "Básquetbol 1", sport: "basquet", grado: "B1", offset: 50},
+                {equipo: equipobasquet_2, nombre: "Básquetbol 2", sport: "basquet", grado: "B2", offset: 65},
+                {equipo: equipobasquet_3, nombre: "Equipo Representativo", sport: "basquet", grado: "B3", offset: 80}
+            ];
             
-            const maxAvatars1A = Math.min(5, equipo_1a.integrantes.length);
-            for (let i = 0; i < maxAvatars1A; i++) {
-                const imgNum = i + 30; // Para tener avatares diferentes
-                team1AHTML += `<img src="https://randomuser.me/api/portraits/men/${imgNum}.jpg" alt="Miembro">`;
+            // Generar HTML para cada equipo
+            let teamsHTML = '';
+            
+            for (const equipo of equiposData) {
+                teamsHTML += generateTeamCard(equipo.equipo, equipo.nombre, equipo.sport, equipo.grado, equipo.offset);
             }
             
-            team1AHTML += `
-                        </div>
-                        <button class="team-expand">Ver integrantes <span>▼</span></button>
-                    </div>
-                    <div class="team-details">
-                        <ul class="members-list">
-            `;
-            
-            for (const integrante of equipo_1a.integrantes) {
-                team1AHTML += `
-                    <li>
-                        <div class="member-info">
-                            <strong>${escapeHTML(integrante.nombre)}</strong>
-                            <span>Papá de: ${escapeHTML(integrante.hijos[0].nombre)}</span>
-                        </div>
-                    </li>
-                `;
-            }
-            
-            team1AHTML += `
-                        </ul>
-                    </div>
-                </div>
-            `;
-            
-            // Equipo 1B
-            let team1BHTML = `
-                <div class="team-card" data-sport="futbol" data-grado="1B">
-                    <div class="team-header">
-                        <h3>${escapeHTML(equipo_1b.nombre_equipo)}</h3>
-                        <span class="team-sport">⚽ Fútbol</span>
-                    </div>
-                    <div class="team-members">
-                        <div class="team-avatars">
-            `;
-            
-            const maxAvatars1B = Math.min(5, equipo_1b.integrantes.length);
-            for (let i = 0; i < maxAvatars1B; i++) {
-                const imgNum = i + 1; // Para tener avatares diferentes
-                team1BHTML += `<img src="https://randomuser.me/api/portraits/men/${imgNum}.jpg" alt="Miembro">`;
-            }
-            
-            team1BHTML += `
-                        </div>
-                        <button class="team-expand">Ver integrantes <span>▼</span></button>
-                    </div>
-                    <div class="team-details">
-                        <ul class="members-list">
-            `;
-            
-            for (const integrante of equipo_1b.integrantes) {
-                team1BHTML += `
-                    <li>
-                        <div class="member-info">
-                            <strong>${escapeHTML(integrante.nombre)}</strong>
-                            <span>Papá de: ${escapeHTML(integrante.hijos[0].nombre)}</span>
-                        </div>
-                    </li>
-                `;
-            }
-            
-            team1BHTML += `
-                        </ul>
-                    </div>
-                </div>
-            `;
-            
-            teamsContainer.innerHTML = team1AHTML + team1BHTML;
+            teamsContainer.innerHTML = teamsHTML;
 
             // Cargar partidos después de cargar equipos
-            loadMatches(equipo_1a, equipo_1b);
+            loadMatches(equipo_1a, equipo_1b, equipo_3, equipo_4, equipo_5, equipo_6, equipo_7, equipo_8, 
+                       equipovolei_1, equipovolei_2, equipobasquet_1, equipobasquet_2, equipobasquet_3);
             
             // Reinicializar los eventos después de cargar el contenido
             initializeEvents();
         }
-
-        // Función para cargar partidos
-        function loadMatches(equipo_1a, equipo_1b) {
-            const matchesContainer = document.getElementById('matches-container');
+        
+        // Función para generar una tarjeta de equipo
+        function generateTeamCard(equipo, nombreMostrado, deporte, grado, imgOffset) {
+            // Determinar el icono del deporte
+            let deporteIcon = "⚽";
+            let deporteNombre = "Fútbol";
             
-            // Partido 1 - Equipo 1A vs Equipo 1B
-            let matchesHTML = `
-                <div class="match-card" data-sport="futbol" data-date="2024-06-15">
-                    <div class="match-header">
-                        <span class="match-time">9:00 AM</span>
-                        <span class="match-discipline">⚽ Fútbol</span>
+            if (deporte === "basquet") {
+                deporteIcon = "🏀";
+                deporteNombre = "Básquet";
+            } else if (deporte === "voleibol") {
+                deporteIcon = "🏐";
+                deporteNombre = "Voleibol";
+            }
+            
+            // Crear HTML del equipo
+            let teamHTML = `
+                <div class="team-card" data-sport="${deporte}" data-grado="${grado}">
+                    <div class="team-header">
+                        <h3>${nombreMostrado || escapeHTML(equipo.nombre_equipo)}</h3>
+                        <span class="team-sport">${deporteIcon} ${deporteNombre}</span>
                     </div>
-                    <div class="match-teams">
-                        <div class="match-team">
-                            <div class="team-logo">
-                                <span class="team-abbr">1A</span>
-                            </div>
-                            <h3>${escapeHTML(equipo_1a.nombre_equipo)}</h3>
+                    <div class="team-members">
+                        <div class="team-avatars">
+            `;
+            
+            // Avatares de miembros (máximo 5)
+            const maxAvatars = Math.min(5, equipo.integrantes.length);
+            for (let i = 0; i < maxAvatars; i++) {
+                const imgNum = (i + imgOffset) % 99; // Para asegurar que no exceda el límite de API
+                teamHTML += `<img src="https://randomuser.me/api/portraits/men/${imgNum}.jpg" alt="Miembro">`;
+            }
+            
+            teamHTML += `
                         </div>
-                        <div class="match-vs">VS</div>
-                        <div class="match-team">
-                            <div class="team-logo">
-                                <span class="team-abbr">1B</span>
-                            </div>
-                            <h3>${escapeHTML(equipo_1b.nombre_equipo)}</h3>
-                        </div>
+                        <button class="team-expand">Ver integrantes <span>▼</span></button>
                     </div>
-                    <div class="match-footer">
-                        <span class="match-venue">Cancha Principal</span>
-                        <button class="match-details-btn">Detalles</button>
-                    </div>
-                </div>
+                    <div class="team-details">
+                        <ul class="members-list">
+            `;
+            
+            // Agregar cada miembro del equipo
+            for (const integrante of equipo.integrantes) {
+                let hijosInfo = '';
                 
-                <!-- Partido 2 -->
-                <div class="match-card" data-sport="basquet" data-date="2024-06-15">
-                    <div class="match-header">
-                        <span class="match-time">10:30 AM</span>
-                        <span class="match-discipline">🏀 Básquet</span>
-                    </div>
-                    <div class="match-teams">
-                        <div class="match-team">
-                            <div class="team-logo">
-                                <span class="team-abbr">5A</span>
-                            </div>
-                            <h3>Padres 5to A</h3>
-                        </div>
-                        <div class="match-vs">VS</div>
-                        <div class="match-team">
-                            <div class="team-logo">
-                                <span class="team-abbr">6B</span>
-                            </div>
-                            <h3>Padres 6to B</h3>
-                        </div>
-                    </div>
-                    <div class="match-footer">
-                        <span class="match-venue">Cancha de Básquetbol</span>
-                        <button class="match-details-btn">Detalles</button>
-                    </div>
-                </div>
+                if (integrante.hijos && integrante.hijos.length > 0) {
+                    if (integrante.hijos.length === 1) {
+                        hijosInfo = `Papá de: ${escapeHTML(integrante.hijos[0].nombre)}`;
+                    } else if (integrante.hijos.length > 1) {
+                        const nombresHijos = integrante.hijos.map(hijo => escapeHTML(hijo.nombre)).join(', ');
+                        hijosInfo = `Papá de: ${nombresHijos}`;
+                    }
+                }
                 
-                <!-- Partido 3 -->
-                <div class="match-card" data-sport="voleibol" data-date="2024-06-16">
-                    <div class="match-header">
-                        <span class="match-time">9:00 AM</span>
-                        <span class="match-discipline">🏐 Voleibol</span>
-                    </div>
-                    <div class="match-teams">
-                        <div class="match-team">
-                            <div class="team-logo">
-                                <span class="team-abbr">1B</span>
-                            </div>
-                            <h3>Padres 1ro B</h3>
+                teamHTML += `
+                    <li>
+                        <div class="member-info">
+                            <strong>${escapeHTML(integrante.nombre)}</strong>
+                            ${hijosInfo ? `<span>${hijosInfo}</span>` : ''}
                         </div>
-                        <div class="match-vs">VS</div>
-                        <div class="match-team">
-                            <div class="team-logo">
-                                <span class="team-abbr">2A</span>
-                            </div>
-                            <h3>Padres 2do A</h3>
-                        </div>
-                    </div>
-                    <div class="match-footer">
-                        <span class="match-venue">Cancha de Voleibol</span>
-                        <button class="match-details-btn">Detalles</button>
+                    </li>
+                `;
+            }
+            
+            teamHTML += `
+                        </ul>
                     </div>
                 </div>
             `;
+            
+            return teamHTML;
+        }
+
+        // Función para cargar partidos
+        function loadMatches(equipo_1a, equipo_1b, equipo_3, equipo_4, equipo_5, equipo_6, equipo_7, equipo_8, 
+                            equipovolei_1, equipovolei_2, equipobasquet_1, equipobasquet_2, equipobasquet_3) {
+            const matchesContainer = document.getElementById('matches-container');
+            
+            // Definir los partidos
+            const matches = [
+                // Partido 1 - Equipo 1A vs Equipo 1B
+                {
+                    sport: "futbol",
+                    date: "2024-06-15",
+                    time: "9:00 AM",
+                    team1: equipo_1a,
+                    team1Abbr: "1A",
+                    team2: equipo_1b,
+                    team2Abbr: "1B",
+                    venue: "Cancha Principal"
+                },
+                
+                // Partido 2 - Equipo 4 vs Otro equipo
+                {
+                    sport: "futbol",
+                    date: "2024-06-15",
+                    time: "10:30 AM",
+                    team1: equipo_4,
+                    team1Abbr: "E4",
+                    team2: {nombre_equipo: "Padres 6to B"},
+                    team2Abbr: "6B",
+                    venue: "Cancha de Fútbol"
+                },
+                
+                // Partido 3
+                {
+                    sport: "futbol",
+                    date: "2024-06-16",
+                    time: "9:00 AM",
+                    team1: equipo_1b,
+                    team1Abbr: "1B",
+                    team2: {nombre_equipo: "Padres 2do A"},
+                    team2Abbr: "2A",
+                    venue: "Cancha Principal"
+                },
+                
+                // Partido 4 - Equipo 3 vs Equipo 1A
+                {
+                    sport: "futbol",
+                    date: "2024-06-22",
+                    time: "11:00 AM",
+                    team1: equipo_3,
+                    team1Abbr: "E3",
+                    team2: equipo_1a,
+                    team2Abbr: "1A",
+                    venue: "Cancha Principal"
+                },
+                
+                // Partido 5 - Equipo 4 vs Equipo 3
+                {
+                    sport: "futbol",
+                    date: "2024-06-23",
+                    time: "9:30 AM",
+                    team1: equipo_4,
+                    team1Abbr: "E4",
+                    team2: equipo_3,
+                    team2Abbr: "E3",
+                    venue: "Cancha de Fútbol"
+                },
+                
+                // Partido 6 - Equipo 5 vs Equipo 1A
+                {
+                    sport: "futbol",
+                    date: "2024-06-16",
+                    time: "11:00 AM",
+                    team1: equipo_5,
+                    team1Abbr: "E5",
+                    team2: equipo_1a,
+                    team2Abbr: "1A",
+                    venue: "Cancha Principal"
+                },
+                
+                // Partido 7 - Equipo 6 vs Equipo 5
+                {
+                    sport: "futbol",
+                    date: "2024-06-23",
+                    time: "8:30 AM",
+                    team1: equipo_6,
+                    team1Abbr: "E6",
+                    team2: equipo_5,
+                    team2Abbr: "E5",
+                    venue: "Cancha Principal"
+                },
+                
+                // Partido 8 - Equipo 7 vs Equipo 6
+                {
+                    sport: "futbol",
+                    date: "2024-06-22",
+                    time: "8:00 AM",
+                    team1: equipo_7,
+                    team1Abbr: "E7",
+                    team2: equipo_6,
+                    team2Abbr: "E6",
+                    venue: "Cancha Principal"
+                },
+                
+                // Partido 9 - Equipo 7 vs Equipo 4
+                {
+                    sport: "futbol",
+                    date: "2024-06-16",
+                    time: "13:00 PM",
+                    team1: equipo_7,
+                    team1Abbr: "E7",
+                    team2: equipo_4, 
+                    team2Abbr: "E4",
+                    venue: "Cancha Secundaria"
+                },
+                
+                // Partido 10 - Equipo 8 vs Equipo 7
+                {
+                    sport: "futbol",
+                    date: "2024-06-15",
+                    time: "12:00 PM",
+                    team1: equipo_8,
+                    team1Abbr: "E8",
+                    team2: equipo_7,
+                    team2Abbr: "E7",
+                    venue: "Cancha Principal"
+                },
+                
+                // Partido 11 - Equipo 8 vs Equipo 3
+                {
+                    sport: "futbol",
+                    date: "2024-06-22",
+                    time: "14:30 PM",
+                    team1: equipo_8,
+                    team1Abbr: "E8",
+                    team2: equipo_3,
+                    team2Abbr: "E3",
+                    venue: "Cancha Secundaria"
+                },
+                
+                // Partido 12 - Partido de Voleibol 1
+                {
+                    sport: "voleibol",
+                    date: "2024-06-15",
+                    time: "14:00 PM",
+                    team1: equipovolei_1,
+                    team1Abbr: "VOL1",
+                    team2: {nombre_equipo: "Voleibol Profesores"},
+                    team2Abbr: "VP",
+                    venue: "Cancha de Voleibol"
+                },
+                
+                // Partido 13 - Partido de Voleibol
+                {
+                    sport: "voleibol",
+                    date: "2024-06-22",
+                    time: "16:00 PM",
+                    team1: equipovolei_1,
+                    team1Abbr: "VOL1",
+                    team2: {nombre_equipo: "Padres Egresados"},
+                    team2Abbr: "PE",
+                    venue: "Cancha de Voleibol"
+                },
+                
+                // Partido 14 - Voleibol 1 vs Voleibol 2
+                {
+                    sport: "voleibol",
+                    date: "2024-06-16",
+                    time: "10:30 AM",
+                    team1: equipovolei_1,
+                    team1Abbr: "VOL1",
+                    team2: equipovolei_2,
+                    team2Abbr: "VOL2",
+                    venue: "Cancha de Voleibol"
+                },
+                
+                // Partido 15 - Voleibol 2 vs Profesores
+                {
+                    sport: "voleibol",
+                    date: "2024-06-23",
+                    time: "11:00 AM",
+                    team1: equipovolei_2,
+                    team1Abbr: "VOL2",
+                    team2: {nombre_equipo: "Voleibol Profesores"},
+                    team2Abbr: "VP",
+                    venue: "Cancha de Voleibol"
+                },
+                
+                // Partido 16 - Básquetbol 1 vs Profesores
+                {
+                    sport: "basquet",
+                    date: "2024-06-15",
+                    time: "13:00 PM",
+                    team1: equipobasquet_1,
+                    team1Abbr: "BAS1",
+                    team2: {nombre_equipo: "Básquet Profesores"},
+                    team2Abbr: "BP",
+                    venue: "Cancha de Básquetbol"
+                },
+                
+                // Partido 17 - Básquetbol 1 vs Exalumnos
+                {
+                    sport: "basquet",
+                    date: "2024-06-22",
+                    time: "12:30 PM",
+                    team1: equipobasquet_1,
+                    team1Abbr: "BAS1",
+                    team2: {nombre_equipo: "Exalumnos"},
+                    team2Abbr: "EXA",
+                    venue: "Cancha de Básquetbol"
+                },
+                
+                // Partido 18 - Básquetbol 1 vs Equipo 7
+                {
+                    sport: "basquet",
+                    date: "2024-06-23",
+                    time: "15:00 PM",
+                    team1: equipobasquet_1,
+                    team1Abbr: "BAS1",
+                    team2: equipo_7,
+                    team2Abbr: "E7",
+                    venue: "Cancha de Básquetbol"
+                },
+                
+                // Partido 19 - Básquetbol 2 vs Básquetbol 1
+                {
+                    sport: "basquet",
+                    date: "2024-06-16",
+                    time: "12:00 PM",
+                    team1: equipobasquet_2,
+                    team1Abbr: "BAS2",
+                    team2: equipobasquet_1,
+                    team2Abbr: "BAS1",
+                    venue: "Cancha de Básquetbol"
+                },
+                
+                // Partido 20 - Básquetbol 2 vs Profesores
+                {
+                    sport: "basquet",
+                    date: "2024-06-22",
+                    time: "9:30 AM",
+                    team1: equipobasquet_2,
+                    team1Abbr: "BAS2",
+                    team2: {nombre_equipo: "Básquet Profesores"},
+                    team2Abbr: "BP",
+                    venue: "Cancha de Básquetbol"
+                },
+                
+                // Partido 21 - Básquetbol 2 vs Equipo 4
+                {
+                    sport: "basquet",
+                    date: "2024-06-23",
+                    time: "10:45 AM",
+                    team1: equipobasquet_2,
+                    team1Abbr: "BAS2",
+                    team2: equipo_4,
+                    team2Abbr: "E4",
+                    venue: "Cancha de Básquetbol"
+                },
+                
+                // Partido 22 - Básquetbol 3 vs Básquetbol 1
+                {
+                    sport: "basquet",
+                    date: "2024-06-15",
+                    time: "16:00 PM",
+                    team1: equipobasquet_3,
+                    team1Abbr: "REP",
+                    team2: equipobasquet_1,
+                    team2Abbr: "BAS1",
+                    venue: "Cancha de Básquetbol"
+                },
+                
+                // Partido 23 - Básquetbol 3 vs Básquetbol 2
+                {
+                    sport: "basquet",
+                    date: "2024-06-16",
+                    time: "17:30 PM",
+                    team1: equipobasquet_3,
+                    team1Abbr: "REP",
+                    team2: equipobasquet_2,
+                    team2Abbr: "BAS2",
+                    venue: "Cancha de Básquetbol"
+                },
+                
+                // Partido 24 - Básquetbol 3 vs Profesores
+                {
+                    sport: "basquet",
+                    date: "2024-06-23",
+                    time: "18:00 PM",
+                    team1: equipobasquet_3,
+                    team1Abbr: "REP",
+                    team2: {nombre_equipo: "Básquet Profesores"},
+                    team2Abbr: "BP",
+                    venue: "Cancha Principal de Básquetbol"
+                }
+            ];
+            
+            // Generar HTML para cada partido
+            let matchesHTML = '';
+            
+            for (const match of matches) {
+                // Determinar el icono del deporte
+                let deporteIcon = "⚽";
+                let deporteNombre = "Fútbol";
+                
+                if (match.sport === "basquet") {
+                    deporteIcon = "🏀";
+                    deporteNombre = "Básquet";
+                } else if (match.sport === "voleibol") {
+                    deporteIcon = "🏐";
+                    deporteNombre = "Voleibol";
+                }
+                
+                matchesHTML += `
+                    <div class="match-card" data-sport="${match.sport}" data-date="${match.date}">
+                        <div class="match-header">
+                            <span class="match-time">${match.time}</span>
+                            <span class="match-discipline">${deporteIcon} ${deporteNombre}</span>
+                        </div>
+                        <div class="match-teams">
+                            <div class="match-team">
+                                <div class="team-logo">
+                                    <span class="team-abbr">${match.team1Abbr}</span>
+                                </div>
+                                <h3>${escapeHTML(match.team1.nombre_equipo)}</h3>
+                            </div>
+                            <div class="match-vs">VS</div>
+                            <div class="match-team">
+                                <div class="team-logo">
+                                    <span class="team-abbr">${match.team2Abbr}</span>
+                                </div>
+                                <h3>${escapeHTML(match.team2.nombre_equipo)}</h3>
+                            </div>
+                        </div>
+                        <div class="match-footer">
+                            <span class="match-venue">${match.venue}</span>
+                            <button class="match-details-btn">Detalles</button>
+                        </div>
+                    </div>
+                `;
+            }
             
             matchesContainer.innerHTML = matchesHTML;
         }
 
         // Función para escapar HTML y prevenir inyección de código
         function escapeHTML(str) {
+            if (!str) return '';
             return str
+                .toString()
                 .replace(/&/g, '&amp;')
                 .replace(/</g, '&lt;')
                 .replace(/>/g, '&gt;')
@@ -409,4 +695,5 @@
         document.addEventListener('DOMContentLoaded', loadTeams);
     </script>
 </body>
+
 </html>
