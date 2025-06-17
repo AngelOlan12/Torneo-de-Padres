@@ -1,0 +1,86 @@
+{
+  "nombre_equipo": "Voleibol 1",
+  "integrantes": [
+    {
+      "nombre": "Moisés custodio Gómez",
+      "hijos": [
+        {
+          "nombre": "Lucy María custodio Jiménez",
+          "grado_grupo": "5°. B"
+        }
+      ]
+    },
+    {
+      "nombre": "Eroylan Sánchez Basto",
+      "hijos": [
+        {
+          "nombre": "Eroylan Sánchez Gutiérrez",
+          "grado_grupo": "2° A"
+        }
+      ]
+    },
+    {
+      "nombre": "Jesús Lorenzo Morales Guzmán",
+      "hijos": [
+        {
+          "nombre": "Elisa Morales Que",
+          "grado_grupo": "6°. B"
+        }
+      ]
+    },
+    {
+      "nombre": "José Inciarte",
+      "hijos": [
+        {
+          "nombre": "Mauro y Ruiz Inciarte",
+          "grado_grupo": "2° B"
+        }
+      ]
+    },
+    {
+      "nombre": "Amrafel Neza",
+      "hijos": [
+        {
+          "nombre": "Juan Pablo Meza Quevedo",
+          "grado_grupo": "5° A"
+        }
+      ]
+    },
+    {
+      "nombre": "Luis Martín",
+      "hijos": [
+        {
+          "nombre": "Luciana",
+          "grado_grupo": "6° A"
+        }
+      ]
+    },
+    {
+      "nombre": "Fred Izquierdo Sánchez",
+      "hijos": [
+        {
+          "nombre": "Sebastián Izquierdo Meneses",
+          "grado_grupo": "1°. B"
+        }
+      ]
+    },
+    {
+      "nombre": "Joel Espinosa Hernandez",
+      "hijos": [
+        {
+          "nombre": "Joel Emiliano Espinosa del Ángel",
+          "grado_grupo": "1°. B"
+        }
+      ]
+    },
+    {
+      "nombre": "Roger Cúpul Juárez",
+      "hijos": [
+        {
+          "nombre": "Matías Cupul Ochoa",
+          "grado_grupo": "1°. B"
+        }
+      ]
+    }
+  ]
+}

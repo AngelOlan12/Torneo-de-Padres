@@ -1,0 +1,29 @@
+{
+  "nombre_equipo": "Voleibol 2",
+  "integrantes": [
+    {
+      "nombre": "Santos Concepción López",
+      "hijos": []
+    },
+    {
+      "nombre": "Cesar López Concepción",
+      "hijos": []
+    },
+    {
+      "nombre": "Abel Coronel Isidro",
+      "hijos": []
+    },
+    {
+      "nombre": "Hugo de la Flor Morales",
+      "hijos": []
+    },
+    {
+      "nombre": "Justino Concepción Almeida",
+      "hijos": []
+    },
+    {
+      "nombre": "Kevin Estañol",
+      "hijos": []
+    }
+  ]
+}
