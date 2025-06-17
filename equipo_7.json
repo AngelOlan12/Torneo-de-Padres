@@ -1,0 +1,68 @@
+{
+  "nombre_equipo": "Equipo 7",
+  "integrantes": [
+    {
+      "nombre": "Eduardo Guillermo Patiño Palma",
+      "hijos": [
+        {
+          "nombre": "Valeria Hinojosa Patiño",
+          "grado_grupo": "5A"
+        }
+      ]
+    },
+    {
+      "nombre": "Ernesto Gutiérrez Torres",
+      "hijos": [
+        {
+          "nombre": "Iker Eduardo Gutiérrez Rodriguez",
+          "grado_grupo": "5A"
+        }
+      ]
+    },
+    {
+      "nombre": "Mario López Requena",
+      "hijos": [
+        {
+          "nombre": "Mario Requena López Aparicio",
+          "grado_grupo": "5A"
+        }
+      ]
+    },
+    {
+      "nombre": "Félix Palomares García",
+      "hijos": [
+        {
+          "nombre": "Félix Samuel Palomares Magaña",
+          "grado_grupo": "5A"
+        }
+      ]
+    },
+    {
+      "nombre": "Carlos Emilio Pérez Vidal",
+      "hijos": [
+        {
+          "nombre": "Yael Carrera Guzmán",
+          "grado_grupo": "5B"
+        }
+      ]
+    },
+    {
+      "nombre": "Alejandro Velázquez Velázquez",
+      "hijos": [
+        {
+          "nombre": "Jonathan Alejandro Velázquez Cruz",
+          "grado_grupo": "5B"
+        }
+      ]
+    },
+    {
+      "nombre": "Jefferson la Rosa",
+      "hijos": [
+        {
+          "nombre": "Adrián la Rosa",
+          "grado_grupo": "5A"
+        }
+      ]
+    }
+  ]
+}

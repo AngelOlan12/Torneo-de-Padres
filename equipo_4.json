@@ -1,0 +1,86 @@
+{
+  "nombre_equipo": "Equipo 4",
+  "integrantes": [
+    {
+      "nombre": "OSCAR DAVID CAMPOS RAMOS",
+      "hijos": [
+        {
+          "nombre": "Alejandro ruiz campos",
+          "grado_grupo": "2A"
+        }
+      ]
+    },
+    {
+      "nombre": "Alan Jaime Martinez",
+      "hijos": [
+        {
+          "nombre": "Maria Paula Jaime",
+          "grado_grupo": "2A"
+        }
+      ]
+    },
+    {
+      "nombre": "JOSE DAVID HERNANDEZ GUZMAN",
+      "hijos": [
+        {
+          "nombre": "MIA SOFIA HERNANDEZ HERNANDEZ",
+          "grado_grupo": "2B"
+        }
+      ]
+    },
+    {
+      "nombre": "Javier Francisco Cruz López",
+      "hijos": [
+        {
+          "nombre": "Joseph xavier Cruz bautista",
+          "grado_grupo": "2B"
+        }
+      ]
+    },
+    {
+      "nombre": "Luis Daniel Vazquez Perera",
+      "hijos": [
+        {
+          "nombre": "Andrea Sofia Vazquez Bastar",
+          "grado_grupo": "2B"
+        }
+      ]
+    },
+    {
+      "nombre": "Alejandro Caraveo Reyes",
+      "hijos": [
+        {
+          "nombre": "Leon Alejandro Caraveo Zurita",
+          "grado_grupo": "3A"
+        }
+      ]
+    },
+    {
+      "nombre": "Luis Xavier Cruz Mota",
+      "hijos": [
+        {
+          "nombre": "Leonardo Xavier Cruz",
+          "grado_grupo": "3A"
+        }
+      ]
+    },
+    {
+      "nombre": "Alejandro Hernández Trujillo",
+      "hijos": [
+        {
+          "nombre": "Arturo Damian Hernández Hernández",
+          "grado_grupo": "3B"
+        }
+      ]
+    },
+    {
+      "nombre": "David Ivan Pérez Gómez",
+      "hijos": [
+        {
+          "nombre": "Diego Emiliano Saldaña Falcon",
+          "grado_grupo": "2B"
+        }
+      ]
+    }
+  ]
+}

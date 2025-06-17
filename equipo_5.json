@@ -1,0 +1,108 @@
+{
+  "nombre_equipo": "Equipo 5",
+  "integrantes": [
+    {
+      "nombre": "Javier Francisco Cruz López",
+      "hijos": [
+        {
+          "nombre": "Naiara Constanza Cruz bautista",
+          "grado_grupo": "4A"
+        }
+      ]
+    },
+    {
+      "nombre": "Jairo de Jesús Maldonado Martínez",
+      "hijos": [
+        {
+          "nombre": "Amaia Sofía Maldonado Nistch",
+          "grado_grupo": "4A"
+        }
+      ]
+    },
+    {
+      "nombre": "Eric Feria de la Cruz",
+      "hijos": [
+        {
+          "nombre": "Ana Patricia Feria Gómez",
+          "grado_grupo": "4A"
+        }
+      ]
+    },
+    {
+      "nombre": "Xavier Méndez sol",
+      "hijos": [
+        {
+          "nombre": "Constanza Méndez chacon",
+          "grado_grupo": "4A"
+        }
+      ]
+    },
+    {
+      "nombre": "Cesar adrian lezama ramirez",
+      "hijos": [
+        {
+          "nombre": "Hansel adrian lezama diaz",
+          "grado_grupo": "4A"
+        }
+      ]
+    },
+    {
+      "nombre": "José García laines",
+      "hijos": [
+        {
+          "nombre": "José Julián García Javier",
+          "grado_grupo": "4A"
+        }
+      ]
+    },
+    {
+      "nombre": "Arex Alberto Feria Acuña",
+      "hijos": [
+        {
+          "nombre": "Juliette Alexa Feria Juarez",
+          "grado_grupo": "4A"
+        }
+      ]
+    },
+    {
+      "nombre": "Carlos Alberto Moreno",
+      "hijos": [
+        {
+          "nombre": "Victoria Moreno",
+          "grado_grupo": "4A"
+        },
+        {
+          "nombre": "Carlos Moreno",
+          "grado_grupo": "1A preescolar"
+        }
+      ]
+    },
+    {
+      "nombre": "Victor ortiz",
+      "hijos": [
+        {
+          "nombre": "Victor Ortiz",
+          "grado_grupo": "4A"
+        }
+      ]
+    },
+    {
+      "nombre": "Alejandro Toache",
+      "hijos": [
+        {
+          "nombre": "Alejandro Toache",
+          "grado_grupo": "4A"
+        }
+      ]
+    },
+    {
+      "nombre": "Miguel Solis",
+      "hijos": [
+        {
+          "nombre": "Constanza Solis",
+          "grado_grupo": "4A"
+        }
+      ]
+    }
+  ]
+}
