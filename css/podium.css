@@ -1,0 +1,610 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-content .subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* Tabs Styles */
+.tabs-container {
+    margin-bottom: 30px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.tab-button {
+    background-color: #fff;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #495057;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.tab-button:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+    color: #212529;
+}
+
+.tab-button.active {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.sport-icon {
+    width: 28px;
+    height: 28px;
+}
+
+/* Sport Container Styles */
+.sport-container {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 40px 30px;
+    margin-bottom: 40px;
+}
+
+.sport-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-direction: column;
+}
+
+.trophy-container {
+    margin-bottom: 20px;
+}
+
+.trophy {
+    width: 100px;
+    height: auto;
+}
+
+.sport-title {
+    font-size: 2.5rem;
+    color: #343a40;
+    text-align: center;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* Podium Styles */
+.podium-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 40px;
+    margin: 50px auto;
+    position: relative;
+    max-width: 1400px;
+    padding: 0 15px;
+}
+
+.podium-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.podium-step:hover {
+    transform: translateY(-10px);
+}
+
+.position-1 {
+    order: 2;
+    z-index: 3;
+    transform: scale(1.1);
+}
+
+.position-2 {
+    order: 1;
+    margin-bottom: 40px;
+    z-index: 2;
+}
+
+.position-3 {
+    order: 3;
+    margin-bottom: 60px;
+    z-index: 1;
+}
+
+.podium {
+    background: #f8f9fa;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    padding: 20px;
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 2px solid #dee2e6;
+}
+
+.position-1 .podium {
+    background: #fff9db;
+    border-color: #ffeb3b;
+    padding: 25px;
+    max-width: 500px;
+}
+
+.position-2 .position-badge {
+    background-color: #adb5bd;
+    color: #495057;
+}
+
+.position-3 .position-badge {
+    background-color: #ff9800;
+    color: #664d03;
+}
+
+/* Mejorar solo el número de posición */
+.position-badge {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #fffbe6 60%, #ffe066 100%);
+    color: #b45309;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 2.5rem;
+    box-shadow: 0 6px 18px rgba(255,215,0,0.13), 0 2px 8px rgba(60,60,60,0.08);
+    border: 5px solid #fff;
+    z-index: 9;
+    letter-spacing: 1px;
+    transition: box-shadow 0.2s, background 0.2s;
+    outline: 3px solid #ffe066;
+}
+
+.position-2 .position-badge {
+    background: linear-gradient(135deg, #f3f4f6 60%, #cbd5e1 100%);
+    color: #64748b;
+    outline: 3px solid #cbd5e1;
+    box-shadow: 0 6px 18px rgba(120,120,120,0.10);
+}
+
+.position-3 .position-badge {
+    background: linear-gradient(135deg, #fff7ed 60%, #fdba74 100%);
+    color: #b45309;
+    outline: 3px solid #fdba74;
+    box-shadow: 0 6px 18px rgba(253,186,116,0.13);
+}
+
+/* Hacer la imagen mucho más grande en desktop */
+.team-photo-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 40%; /* Imagen mucho más ancha y grande */
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 4px solid #fff;
+}
+
+.team-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+    border-radius: 18px;
+}
+
+.podium:hover .team-photo {
+    transform: scale(1.15);
+}
+
+.team-info {
+    text-align: center;
+    padding: 15px 0 10px;
+}
+
+.team-name {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #343a40;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.team-score {
+    font-size: 1.3rem;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.position-1 .team-name {
+    font-size: 1.9rem;
+    color: #664d03;
+}
+
+.position-1 .team-score {
+    font-size: 1.5rem;
+    color: #856404;
+}
+
+/* Mejorar la posición de la cinta de CAMPEÓN para que no tape el número */
+.winner-ribbon {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%) rotate(8deg);
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 28px 8px 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+    z-index: 10;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(60,60,60,0.08);
+    border: 2px solid #fff;
+    pointer-events: none;
+    /* Que tape un poco el número pero ambos se vean bien */
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #343a40;
+    color: #fff;
+    border-radius: 12px;
+    margin-top: 40px;
+}
+
+.footer p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Back Button Styles */
+.text-center {
+    text-align: center;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: #3b82f6;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+    background-color: #2563eb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (min-width: 1200px) {
+    .podium-container {
+        max-width: 1600px;
+        gap: 80px;
+    }
+    .podium {
+        max-width: 520px;
+    }
+    .position-1 .podium {
+        max-width: 600px;
+    }
+    .team-photo-container {
+        padding-bottom: 28%; /* Aún más ancha en pantallas grandes */
+    }
+    .team-photo {
+        border-radius: 22px;
+    }
+    .team-name {
+        font-size: 2.5rem;
+    }
+    .team-score {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .podium-container {
+        max-width: 1400px;
+        gap: 60px;
+    }
+    .podium {
+        max-width: 450px;
+    }
+    .position-1 .podium {
+        max-width: 500px;
+    }
+    .team-photo-container {
+        padding-bottom: 40%;
+    }
+    .team-photo {
+        border-radius: 16px;
+    }
+    .team-name {
+        font-size: 2.2rem;
+    }
+    .team-score {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 992px) { /* Adjustments for laptops and larger screens */
+    .podium-container {
+        max-width: 1400px;
+        gap: 60px;
+    }
+
+    .podium {
+        max-width: 450px; /* Keep card size */
+    }
+
+    .position-1 .podium {
+        max-width: 500px; /* Keep card size */
+    }
+
+    .team-photo-container {
+        padding-bottom: 40%; /* Make images taller */
+    }
+
+    .team-name {
+        font-size: 2.2rem;
+    }
+
+    .team-score {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .podium-container {
+        max-width: 1400px;
+    }
+
+    .podium {
+        max-width: 450px;
+    }
+
+    .position-1 .podium {
+        max-width: 500px;
+    }
+
+    .team-photo-container {
+        padding-bottom: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 40px 20px;
+    }
+    
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .header-content .subtitle {
+        font-size: 1rem;
+    }
+    
+    .tabs {
+        gap: 10px;
+    }
+    
+    .tab-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+    
+    .sport-container {
+        padding: 30px 20px;
+    }
+    
+    .sport-title {
+        font-size: 2rem;
+    }
+    
+    .trophy {
+        width: 80px;
+    }
+    
+    .podium-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    
+    .position-1, .position-2, .position-3 {
+        order: unset;
+        margin-bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .position-1 {
+        margin-top: 0;
+        order: 1;
+    }
+    
+    .position-2 {
+        margin-top: 20px;
+        order: 2;
+    }
+    
+    .position-3 {
+        margin-top: 20px;
+        order: 3;
+    }
+    
+    .podium {
+        max-width: 350px;
+    }
+
+    .position-1 .podium {
+        max-width: 380px;
+    }
+    
+    .team-photo-container {
+        padding-bottom: 80%;
+    }
+    
+    .team-name {
+        font-size: 1.3rem;
+    }
+    
+    .position-1 .team-name {
+        font-size: 1.6rem;
+    }
+    
+    .team-score {
+        font-size: 1.1rem;
+    }
+    
+    .position-1 .team-score {
+        font-size: 1.3rem;
+    }
+    
+    .back-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 30px 15px;
+    }
+    
+    .header-content h1 {
+        font-size: 2rem;
+    }
+    
+    .header-content .subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .tabs {
+        gap: 8px;
+    }
+    
+    .tab-button {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .sport-icon {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .sport-container {
+        padding: 25px 15px;
+    }
+    
+    .sport-title {
+        font-size: 1.7rem;
+    }
+    
+    .trophy {
+        width: 60px;
+    }
+    
+    .podium {
+        max-width: 280px;
+    }
+    
+    .position-1 .podium {
+        max-width: 280px;
+    }
+    
+    .team-photo-container {
+        padding-bottom: 65%;
+    }
+    
+    .team-name {
+        font-size: 1.1rem;
+    }
+    
+    .position-1 .team-name {
+        font-size: 1.3rem;
+    }
+    
+    .team-score {
+        font-size: 1rem;
+    }
+    
+    .position-1 .team-score {
+        font-size: 1.1rem;
+    }
+    
+    .back-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
