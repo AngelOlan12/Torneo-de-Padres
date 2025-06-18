@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premiaciones Deportivas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/podium.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1><i class="fas fa-trophy"></i> Premiaciones Deportivas</h1>
+                <p class="subtitle">Celebrando la excelencia y el esfuerzo de nuestros atletas</p>
+            </div>
+        </header>
+        
+        <div class="tabs-container">
+            <!-- Pestañas de navegación -->
+            <div class="tabs">
+                <button class="tab-button" data-sport="futbol" type="button">
+                    <img src="https://cdn-icons-png.flaticon.com/512/53/53283.png" alt="Fútbol" class="sport-icon"> 
+                    Fútbol
+                </button>
+                <button class="tab-button" data-sport="voleibol" type="button">
+                    <img src="https://cdn-icons-png.flaticon.com/512/33/33736.png" alt="Voleibol" class="sport-icon"> 
+                    Voleibol
+                </button>
+                <button class="tab-button" data-sport="basquetbol" type="button">
+                    <img src="https://cdn-icons-png.flaticon.com/512/889/889455.png" alt="Basquetbol" class="sport-icon"> 
+                    Basquetbol
+                </button>
+            </div>
+        </div>
+        
+        <!-- Contenido Fútbol -->
+        <div id="futbol" class="tab-content active">
+            <div class="sport-container">
+                <div class="sport-header">
+                    <div class="trophy-container">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3112/3112946.png" alt="Trofeo Fútbol" class="trophy">
+                    </div>
+                    <h2 class="sport-title">Campeones de Fútbol</h2>
+                </div>
+                
+                <div class="podium-container">
+                    <!-- Segundo lugar -->
+                    <div class="podium-step position-2">
+                        <div class="podium">
+                            <div class="position-badge">2</div>
+                            
+                            <!-- Contenedor de imagen con tamaño fijo -->
+                            <div class="team-photo-container">
+                                <img src="equipo4.jpeg" alt="Equipo Águilas" class="team-photo">
+                            </div>
+                            
+                            <div class="team-info">
+                                <div class="team-name">Equipo #4</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Primer lugar -->
+                    <div class="podium-step position-1">
+                        <div class="podium">
+                            <div class="position-badge">1</div>
+                            <div class="winner-ribbon">CAMPEÓN</div>
+                            
+                            <!-- Contenedor de imagen con tamaño fijo -->
+                            <div class="team-photo-container">
+                                <img src="equipo7.jpeg" alt="Equipo Tigres" class="team-photo">
+                            </div>
+                            
+                            <div class="team-info">
+                                <div class="team-name">Equipo #7</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contenido Voleibol -->
+        <div id="voleibol" class="tab-content">
+            <div class="sport-container">
+                <div class="sport-header">
+                    <div class="trophy-container">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2158/2158416.png" alt="Trofeo Voleibol" class="trophy">
+                    </div>
+                    <h2 class="sport-title">Campeones de Voleibol</h2>
+                </div>
+                
+                    <!-- Primer lugar -->
+                    <div class="podium-step position-1">
+                        <div class="podium">
+                            <div class="position-badge">1</div>
+                            <div class="winner-ribbon">CAMPEÓN</div>
+                            <div class="team-photo-container">
+                                <img src="voleibol1.jpeg" alt="Equipo 1" class="team-photo">
+                            </div>
+                            <div class="team-info">
+                                <div class="team-name">Equipo #1</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contenido Basquetbol -->
+        <div id="basquetbol" class="tab-content">
+            <div class="sport-container">
+                <div class="sport-header">
+                    <div class="trophy-container">
+                        <img src="basket.png" alt="Trofeo Basquetbol" class="trophy">
+                    </div>
+                    <h2 class="sport-title">Campeones de Basquetbol</h2>
+                </div>
+                
+                    
+                    <!-- Primer lugar -->
+                    <div class="podium-step position-1">
+                        <div class="podium">
+                            <div class="position-badge">1</div>
+                            <div class="winner-ribbon">CAMPEÓN</div>
+                            <div class="team-photo-container">
+                                <img src="basquetbol1.jpeg" alt="Equipo 1" class="team-photo">
+                            </div>
+                            <div class="team-info">
+                                <div class="team-name">Equipo #1</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Volver al inicio
+            </a>
+        </div>
+        
+        <footer class="footer">
+            <p>&copy; 2025 Torneo Día del Padre | IET CARLOS PELLICER CÁMARA</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Mostrar solo fútbol al cargar
+        document.addEventListener("DOMContentLoaded", function() {
+            // Oculta todos los contenidos y desactiva todos los botones
+            document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(tc => tc.style.display = 'none');
+            // Activa solo fútbol
+            var defaultBtn = document.querySelector('.tab-button[data-sport="futbol"]');
+            var defaultTab = document.getElementById('futbol');
+            if(defaultBtn) defaultBtn.classList.add('active');
+            if(defaultTab) defaultTab.style.display = 'block';
+        });
+
+        // Cambia de disciplina al hacer click en los botones
+        document.querySelectorAll('.tab-button').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                // Quitar 'active' de todos los botones y ocultar todos los contenidos
+                document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(tc => tc.style.display = 'none');
+                // Activar el botón y mostrar el contenido correspondiente
+                btn.classList.add('active');
+                var sport = btn.getAttribute('data-sport');
+                var content = document.getElementById(sport);
+                if(content) content.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
